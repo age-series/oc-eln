@@ -23,7 +23,7 @@ selected = ""
 while true do
   choice = io.read()
   for k,v in pairs(devices) do
-    if choice == k then
+    if tonumber(choice) == tonumber(k) then
       selected = v
     end
   end
