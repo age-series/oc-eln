@@ -13,6 +13,6 @@ for k,v in component.list() do
   end
 end
 
-for k,v in devices do
+for k,v in devices.list() do
   print(k,v)
 end
