@@ -27,7 +27,7 @@ while true do
       selected = v
     end
   end
-  if selected != "" then
+  if selected ~= "" then
     break
   else
     print("Please make a selection")
