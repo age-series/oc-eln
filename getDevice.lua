@@ -1,15 +1,18 @@
 local component = require("component")
 
-t = {}
+devices = {}
+
+i = 0
 
 for k,v in component.list() do
   print(k,v)
   if v == "ElnProbe" then
     print(k)
-    t[0] = k
+    devices[i] = k
+    i = i + 1
   end
 end
 
-for k,v in t do
+for k,v in devices do
   print(k,v)
 end
