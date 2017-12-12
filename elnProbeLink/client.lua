@@ -51,6 +51,8 @@ while 1 do
 
   a,b,c,d,e,f = split(message, ",")
 
+  print(a)
+
   probe.signalSetOut(SIDES[0], tonumber(a))
   probe.signalSetOut(SIDES[1], tonumber(b))
   probe.signalSetOut(SIDES[2], tonumber(c))
