@@ -3,10 +3,6 @@ component = require("component")
 tunnels = {}
 probes = {}
 
-for k,v in pairs(devices) do
-  print(k,v)
-end
-
 i = 0
 j = 0
 
