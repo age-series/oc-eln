@@ -57,7 +57,7 @@ while 1 do
 
   for i = 0,5,1 do
     print(tab[i])
-    probe.signalSetOut(SIDES[i], tonumber(tab[i]))
+    probe.signalSetOut(SIDES[i], tab[i])
   end
 
   os.sleep(0.05)
