@@ -54,6 +54,7 @@ while 1 do
   i = 0
 
   for k,v in pairs(tab) do
+    print(SIDES[i] .. ", " .. v .. " " .. k)
     probe.signalSetOut(SIDES[i], v)
     i = i + 1
   end
