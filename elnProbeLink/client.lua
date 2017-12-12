@@ -51,6 +51,10 @@ while 1 do
 
   tab = split(message, ",")
 
+  for k,v in pairs(tab) do
+    print(k .. ", " .. v)
+  end
+
   for i = 0,5,1 do
     print(tab[i])
     probe.signalSetOut(SIDES[i], tonumber(tab[i]))
