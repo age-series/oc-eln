@@ -53,11 +53,10 @@ while 1 do
 
   i = 0
 
-  for k,v in pairs(tab) do
-    print(SIDES[i])
+  for k,v in pairs(SIDES) do
     print(k)
-    print(v)
-    probe.signalSetOut(SIDES[i], v)
+    print(tab[i])
+    probe.signalSetOut(k, tab[i])
     i = i + 1
   end
 
