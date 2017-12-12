@@ -41,8 +41,8 @@ sn[4] = "YP"
 sn[5] = "ZN"
 sn[6] = "ZP"
 
-for k,v in pairs(SIDES) do
-  probe.signalSetDir(k,"out")
+for k,v in pairs(sn) do
+  probe.signalSetDir(v,"out")
 end
 
 while 1 do
