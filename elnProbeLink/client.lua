@@ -66,7 +66,7 @@ while 1 do
     print(v)
     print(sn[i])
 
-    probe.signalSetOut(sn[i], v)
+    probe.signalSetOut(sn[i], tonumber(v))
     i = i + 1
   end
 
