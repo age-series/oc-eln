@@ -1,4 +1,5 @@
 component = require("component")
+event = require("event")
 
 tunnels = {}
 probes = {}
