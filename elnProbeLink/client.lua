@@ -55,17 +55,12 @@ end
 
 while 1 do
   _, _, _, _, _, message = event.pull("modem_message")
-  print(message)
 
   tab = split(message, ",")
 
   i = 1
 
   for k,v in pairs(tab) do
-    print(k)
-    print(v)
-    print(sn[i])
-
     probe.signalSetOut(sn[i], tonumber(v))
     i = i + 1
   end
