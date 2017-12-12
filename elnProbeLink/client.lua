@@ -30,13 +30,21 @@ SIDES["YP"] = "Top"
 SIDES["ZN"] = "North (z-)"
 SIDES["ZP"] = "South (z+)"
 
+for k,v in pairs(SIDES) do
+  signalSetDir(k,"out")
+end
+
 while 1 do
   _, _, _, _, _, message = event.pull("modem_message")
   print(message)
 
   a,b,c,d,e,f = message:match("([^,]+),([^,]+)")
 
-  for k,v in pairs(SIDES) do
-    print(k)
-  end
+  probe.signalSetOut(SIDES[0], tonumber(a))
+  probe.signalSetOut(SIDES[1], tonumber(b))
+  probe.signalSetOut(SIDES[2], tonumber(c))
+  probe.signalSetOut(SIDES[3], tonumber(d))
+  probe.signalSetOut(SIDES[4], tonumber(e))
+  probe.signalSetOut(SIDES[5], tonumber(f))
+  os.sleep(0.05)
 end
