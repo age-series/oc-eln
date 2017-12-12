@@ -41,6 +41,14 @@ SIDES["YP"] = "Top"
 SIDES["ZN"] = "North (z-)"
 SIDES["ZP"] = "South (z+)"
 
+sn = {}
+sn[1] = "XN"
+sn[2] = "XP"
+sn[3] = "YN"
+sn[4] = "YP"
+sn[5] = "ZN"
+sn[6] = "ZP"
+
 for k,v in pairs(SIDES) do
   probe.signalSetDir(k,"out")
 end
@@ -51,14 +59,14 @@ while 1 do
 
   tab = split(message, ",")
 
-  i = 0
+  i = 1
 
   for k,v in pairs(tab) do
-    print(k .. ", " .. v)
-  end
+    print(k)
+    print(v)
+    print(sn[i])
 
-  for k,v in pairs(SIDES) do
-    probe.signalSetOut(k, tab[i])
+    probe.signalSetOut(sn[i], v)
     i = i + 1
   end
 
