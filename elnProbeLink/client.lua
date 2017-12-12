@@ -1,6 +1,16 @@
 component = require("component")
 event = require("event")
 
+-- thank you, https://stackoverflow.com/a/20100401
+
+function split(s, delimiter)
+    result = {};
+    for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+        table.insert(result, match);
+    end
+    return result;
+end
+
 tunnels = {}
 probes = {}
 
@@ -39,7 +49,7 @@ while 1 do
   _, _, _, _, _, message = event.pull("modem_message")
   print(message)
 
-  a,b,c,d,e,f = message:match("([^,]+),([^,]+)")
+  a,b,c,d,e,f = split(message, ",")
 
   probe.signalSetOut(SIDES[0], tonumber(a))
   probe.signalSetOut(SIDES[1], tonumber(b))
