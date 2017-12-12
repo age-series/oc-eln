@@ -31,7 +31,7 @@ SIDES["ZN"] = "North (z-)"
 SIDES["ZP"] = "South (z+)"
 
 for k,v in pairs(SIDES) do
-  signalSetDir(k,"out")
+  probe.signalSetDir(k,"out")
 end
 
 while 1 do
