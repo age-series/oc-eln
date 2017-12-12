@@ -49,15 +49,11 @@ while 1 do
   _, _, _, _, _, message = event.pull("modem_message")
   print(message)
 
-  a,b,c,d,e,f = split(message, ",")
+  tab = split(message, ",")
 
-  print(a)
+  for i in 0,5,1 do
+    probe.signalSetOut(SIDES[i], tonumber(tab[i]))
+  end
 
-  probe.signalSetOut(SIDES[0], tonumber(a))
-  probe.signalSetOut(SIDES[1], tonumber(b))
-  probe.signalSetOut(SIDES[2], tonumber(c))
-  probe.signalSetOut(SIDES[3], tonumber(d))
-  probe.signalSetOut(SIDES[4], tonumber(e))
-  probe.signalSetOut(SIDES[5], tonumber(f))
   os.sleep(0.05)
 end
