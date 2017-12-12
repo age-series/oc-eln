@@ -64,7 +64,7 @@ while 1 do
       end
     end
     print(d)
-    probe.signalSetOut(k, d)
+    probe.signalSetOut(k, tonumber(d))
     i = i + 1
   end
 
