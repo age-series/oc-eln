@@ -33,14 +33,6 @@ end
 link = component.proxy(component.get(tunnels[0]))
 probe = component.proxy(component.get(probes[0]))
 
-SIDES = {}
-SIDES["XN"] = "West (x-)"
-SIDES["XP"] = "East (x+)"
-SIDES["YN"] = "Bottom"
-SIDES["YP"] = "Top"
-SIDES["ZN"] = "North (z-)"
-SIDES["ZP"] = "South (z+)"
-
 sn = {}
 sn[1] = "XN"
 sn[2] = "XP"
