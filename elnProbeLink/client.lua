@@ -53,6 +53,10 @@ while 1 do
 
   i = 0
 
+  for k,v in pairs(tab) do
+    print(k .. ", " .. v)
+  end
+
   for k,v in pairs(SIDES) do
     probe.signalSetOut(k, tab[i])
     i = i + 1
