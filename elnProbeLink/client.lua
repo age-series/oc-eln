@@ -55,8 +55,16 @@ while 1 do
 
   for k,v in pairs(SIDES) do
     print(k)
-    print(tab[i])
-    probe.signalSetOut(k, tab[i])
+    j = 0
+    d = ""
+    for t,y in pairs(tab) do:
+      j = j + 1
+      if i == j then:
+        d = y
+      end
+    end
+    print(d)
+    probe.signalSetOut(k, d)
     i = i + 1
   end
 
