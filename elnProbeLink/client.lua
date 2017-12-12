@@ -51,13 +51,11 @@ while 1 do
 
   tab = split(message, ",")
 
-  for k,v in pairs(tab) do
-    print(k .. ", " .. v)
-  end
+  i = 0
 
-  for i = 0,5,1 do
-    print(tab[i])
-    probe.signalSetOut(SIDES[i], tab[i])
+  for k,v in pairs(tab) do
+    probe.signalSetOut(SIDES[k], tab[i])
+    i = i + 1
   end
 
   os.sleep(0.05)
