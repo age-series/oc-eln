@@ -57,9 +57,9 @@ while 1 do
     print(k)
     j = 0
     d = ""
-    for t,y in pairs(tab) do:
+    for t,y in pairs(tab) do
       j = j + 1
-      if i == j then:
+      if i == j then
         d = y
       end
     end
